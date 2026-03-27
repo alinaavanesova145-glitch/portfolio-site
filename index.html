@@ -3,48 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio | Modern & Dynamic</title>
-    <meta name="description" content="A premium portfolio site built with rich aesthetics, gradients, and micro-animations.">
+    <title>Visuals by [NAME] | Photographer & Film Director</title>
+    <meta name="description" content="A cinematic, high-end portfolio showcasing photography and film directing work. Focused on minimalist design and visual storytelling.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body class="dark-mode">
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
     <header id="main-header">
         <nav>
-            <div class="logo">PORTFOLIO</div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+            <div class="logo">NAME / VISION</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Start</a></li>
+                <li><a href="#about">Bio</a></li>
+                <li><a href="#projects">Work</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
     <main>
         <section id="hero">
+            <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1>Crafting Digital Experiences</h1>
-                <p>A full-stack developer with a passion for modern design and seamless experiences.</p>
-                <a href="#projects" class="btn">View Work</a>
+                <span class="eyebrow">Photographer & Director</span>
+                <h1 class="reveal-text">Capturing Quiet Moments <br> in a Loud World.</h1>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">The Work</a>
+                    <a href="mailto:contact@example.com" class="btn btn-secondary">Inquiry</a>
+                </div>
+            </div>
+            <div class="hero-bg">
+                <!-- Video or High-res image placeholder -->
+                <div class="placeholder-img" id="hero-placeholder"></div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container grid-2">
+                <div class="about-image reveal">
+                    <div class="placeholder-img" id="portrait-placeholder"></div>
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">A Storyteller <br> Behind the Lens</h2>
+                    <p class="bio-text">
+                        [Placeholder Bio: Write about your journey as a photographer and director. Mention your unique vision, 
+                        the themes you explore, and your experience in both still photography and cinematic storytelling. 
+                        Keep it minimalist and impactful.]
+                    </p>
+                    <p class="bio-text secondary">
+                        Specializing in visual narratives that bridge the gap between commercial aesthetics and artistic expression.
+                    </p>
+                    <div class="about-links">
+                        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                        <a href="https://instagram.com" target="_blank">Instagram</a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="projects">
-            <h2>Featured Projects</h2>
-            <div class="project-grid">
-                <!-- Project cards will go here -->
-                <div class="project-card">
-                    <div class="project-image" id="project1-img"></div>
-                    <h3>Project One</h3>
-                    <p>Modern web application built with focus on UX.</p>
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">Selected Works</h2>
+                    <div class="filter-controls">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="photography">Photography</button>
+                        <button class="filter-btn" data-filter="film">Film/Directing</button>
+                    </div>
+                </header>
+
+                <div class="work-grid">
+                    <!-- Project placeholders -->
+                    <div class="work-item photography reveal">
+                        <div class="work-img placeholder-img"></div>
+                        <div class="work-info">
+                            <h3>Nocturnal Series</h3>
+                            <p>Still Photography / 2024</p>
+                        </div>
+                    </div>
+                    <div class="work-item film reveal">
+                        <div class="work-img placeholder-img"></div>
+                        <div class="work-info">
+                            <h3>Silent Echoes</h3>
+                            <p>Short Film / Director</p>
+                        </div>
+                    </div>
+                    <div class="work-item photography reveal">
+                        <div class="work-img placeholder-img"></div>
+                        <div class="work-info">
+                            <h3>Urban Solitude</h3>
+                            <p>Commissioned Work / Tokyo</p>
+                        </div>
+                    </div>
+                    <div class="work-item film reveal">
+                        <div class="work-img placeholder-img"></div>
+                        <div class="work-info">
+                            <h3>Fragments of Time</h3>
+                            <p>Documentary / Cinematographer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h2 class="section-title">Let's Create <br> Together.</h2>
+                        <ul class="contact-list">
+                            <li><a href="mailto:name@vision.com">name@vision.com</a></li>
+                            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                            <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div class="contact-form-container">
+                        <form id="contact-form">
+                            <div class="input-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Proposal</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer id="main-footer">
-        <p>&copy; 2026 Your Name. All rights reserved.</p>
+        <div class="container row">
+            <p>&copy; 2026 NAME / VISION. All rights reserved.</p>
+            <div class="social-icons">
+                <!-- Icon placeholders -->
+            </div>
+        </div>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
 </body>
 </html>
